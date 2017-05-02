@@ -1,4 +1,6 @@
 var React = require('react');
+
+// CSS requires
 require('./css/todoItem.css');
 
 // Create TodoItem component

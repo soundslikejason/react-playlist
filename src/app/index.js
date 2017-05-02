@@ -1,5 +1,9 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+require('./css/index.css');
+
+// Module requires
+var TodoItem = require('./todoItem')
 
 // Create component
 var TodoComponent = React.createClass({
@@ -31,25 +35,6 @@ var TodoComponent = React.createClass({
     this.setState({
       todos: updatedTodos
     });
-  }
-});
-
-// Create TodoItem component
-var TodoItem = React.createClass({
-  render: function() {
-    return(
-      <li>
-        <div className="todo-item">
-          <span className="item-name">{this.props.item}</span>
-          <span className="item-delete" onClick={this.handleDelete}> x </span>
-        </div>
-      </li>
-    );
-  },
-  
-  // Custom functions
-  handleDelete: function() {
-    this.props.onDelete(this.props.item);
   }
 });
 
